@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My First Website</title>
+  <meta name="description" content="My First Website — Explore IT hobbies: coding, web dev, cybersecurity, AI, robotics, and more." />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#9aa7bf;
+      --accent:#4649e5; /* indigo */
+      --accent-2:#06b6d4; /* cyan */
+      --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#061022 0%,#150728 60%);color:#e6eef8}
+    a{color:inherit;text-decoration:none}
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .dot{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:40px 32px}
+    .hero-left h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:12px 18px;border-radius:12px;color:#051225;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+
+    /* Hobby grid */
+    .hobbies{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:32px}
+    .hobby{padding:16px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .hobby h3{margin:6px 0 8px}
+    .hobby p{color:var(--muted);margin:0;font-size:14px}
+
+    /* Features */
+    .features{display:flex;gap:18px;padding:0 32px 32px}
+    .features .feature{flex:1;padding:18px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .features h4{margin:0 0 8px}
+
+    /* Testimonials */
+    .testimonials{padding:32px}
+    .test-list{display:flex;gap:12px;flex-wrap:wrap}
+    .testimonial{min-width:220px;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+
+    footer{padding:30px 32px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;gap:18px;padding:20px}
+      .hero-right{order:-1}
+      nav ul{display:none}
+    }
+
+    /* small UI touches */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#111827,rgba(255,255,255,0.02));font-weight:700;color:var(--accent-2)}
+    form input, form textarea{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="dot">Mf</div>
+      <div>
+        <div style="font-weight:800">My First Website</div>
+        <div style="font-size:12px;color:var(--muted)">Learn • Build • Share</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learn">Learn</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="badge">Free Resources</div>
+        <h1>Welcome to <span style="color:var(--accent)">My First Website</span></h1>
+        <h1>My names are Hafashimana rene</h1>
+        <p>Discover exciting IT hobbies, step-by-step guides, mini-projects and community tips to kickstart your tech journey — whether you love coding, building robots or exploring cybersecurity.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">Get Started</button>
+          <a href="#contact" class="btn ghost">Join Newsletter</a>
+        </div>
+        <div style="margin-top:18px;color:var(--muted);font-size:14px">Popular topics: <strong>Web Dev</strong> • <strong>Python</strong> • <strong>Cybersecurity</strong> • <strong>AI & Data</strong></div>
+      </div>
+
+      <aside class="card hero-right" style="width:100%;max-width:420px">
+        <img src="c:\Users\HP\OneDrive\Desktop\MY PICS\Screenshot_4-11-2025_202311_www.instagram.com.jpeg">
+        <h3 style="margin:0 0 8px">Featured mini-project</h3>
+        <p style="color:var(--muted);margin:0 0 12px">Build a personal portfolio site in one afternoon — template, checklist and deploy guide included.</p>
+        <div style="display:flex;gap:8px">
+          <a class="btn" href="#projects">See Project</a>
+          <a class="btn ghost" href="#learn">Tutorial</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+      <div class="hobby card">
+        <h3>Web Development</h3>
+        <p>Create websites using HTML, CSS, JavaScript. Build interactive UIs and share them online.</p>
+      </div>
+
+      <div class="hobby card">
+        <h3>Programming (Python / JavaScript)</h3>
+        <p>Automate tasks, build games, and learn problem-solving with real code projects.</p>
+      </div>
+
+      <div class="hobby card">
+        <h3>Cybersecurity</h3>
+        <p>Understand networks, ethical hacking basics, and how to keep systems safe.</p>
+      </div>
+
+      <div class="hobby card">
+        <h3>Robotics & Electronics</h3>
+        <p>Combine hardware and software to make moving, sensing devices — Arduino and Raspberry Pi friendly.</p>
+      </div>
+
+      <div class="hobby card">
+        <h3>Data Science & AI</h3>
+        <p>Analyze data, visualise insights, and experiment with simple AI models and projects.</p>
+      </div>
+
+      <div class="hobby card">
+        <h3>Game Development</h3>
+        <p>Design small games to learn logic, animation, and storytelling — publish to share with friends.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="features">
+      <div class="feature card">
+        <h4>Project Templates</h4>
+        <p style="color:var(--muted)">Ready-to-use templates for websites, portfolios, and simple apps so you can focus on learning and customizing.</p>
+      </div>
+
+      <div class="feature card">
+        <h4>Tutorials & Challenges</h4>
+        <p style="color:var(--muted)">Short guided tutorials with challenges and solutions to level up fast.</p>
+      </div>
+
+      <div class="feature card">
+        <h4>Community Showcase</h4>
+        <p style="color:var(--muted)">Share your project for feedback and get inspiration from other learners.</p>
+      </div>
+    </section>
+
+    <section id="learn" class="testimonials">
+      <h3 style="padding:0 32px 8px;margin:0">Why learners love it</h3>
+      <div class="test-list" style="padding:0 32px">
+        <div class="testimonial card">
+          <strong>"Easy to follow"</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Step-by-step guides that actually help you finish a project.</p>
+        </div>
+        <div class="testimonial card">
+          <strong>"Hands-on"</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Projects and templates you can fork and make your own.</p>
+        </div>
+        <div class="testimonial card">
+          <strong>"Friendly community"</strong>
+          <p style="color:var(--muted);margin:8px 0 0">Encouraging feedback and beginner-friendly tips.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="padding:0 32px 48px">
+      <div class="card" style="max-width:800px;margin:auto;">
+        <h3>Get updates — join the newsletter</h3>
+        <p style="color:var(--muted)">Receive weekly mini-projects, tutorials and events. No spam.</p>
+        <form onsubmit="event.preventDefault();alert('Thanks! (This is a demo form.)')" style="margin-top:12px">
+          <label for="email">Email</label>
+          <input id="email" type="investorrene608@gmail.com" placeholder="investorrene608@gmail.com.com" required>
+          <label for="message">Tell us what you want to learn</label>
+          <textarea id="Yo are most welcome" rows="3" placeholder="e.g. build a website, learn Python"></textarea>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn" type="submit">Subscribe</button>
+            <button class="btn ghost" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;gap:12px;align-items:center">
+      <div style="font-weight:700">My First Website</div>
+      <div style="font-size:13px;color:var(--muted)">© " + new Date().getFullYear() + "</div>
+    </div>
+    <div style="color:var(--muted)">Made with ❤️ • Learn by doing</div>
+  </footer>
+
+  <script>
+    // Small accessibility tweak: focus outline for keyboard users
+    document.body.addEventListener('keyup', (e)=>{
+      if(e.key==='Tab') document.documentElement.style.setProperty('--focus','2px solid rgba(255,255,255,0.12)');
+    });
+  </script>
+</body>
+</html>
